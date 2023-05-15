@@ -4,8 +4,140 @@ body {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: bold;
   text-align: center;
   padding: 1.5rem 0;
+  color: darkslategray;
+}
+
+.form-container {
+  background-color: lightcyan;
+  width: 20em;
+  margin: 0 auto;
+  padding: 1em;
+  border: solid 2px darkcyan;
+  border-radius: 15px;
+}
+
+.form-legend,
+.short-url-legend {
+  padding: 0 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  color: darkcyan;
+}
+table {
+  width: 100%;
+  margin-right: 0;
+}
+.url-label {
+  padding-right: 1rem;
+  font-weight: 600;
+  color: darkslategray;
+}
+
+.url-input {
+  width: 95%;
+  outline: none;
+  border: 1.5px solid darkcyan;
+  border-radius: 5px;
+  padding: 0.3rem;
+  font-size: 1rem;
+  color: darkslategray;
+}
+
+.url-submit {
+  padding: 0.3rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: solid 2px darkcyan;
+  border-radius: 50px;
+  color: darkcyan;
+  background-color: lightcyan;
+  transition: all 300ms;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.url-submit:hover {
+  color: lightcyan;
+  background-color: darkolivegreen;
+}
+
+.short-url-container {
+  width: 40em;
+  margin: 2em auto;
+  border: solid 2px darkolivegreen;
+  border-radius: 15px;
+  padding: 1em;
+}
+
+.short-url-legend {
+  text-align: right;
+}
+.list {
+  color: darkolivegreen;
+}
+.list th {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: underline;
+  line-height: 1.7rem;
+}
+.title-td {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: solid 2px darkolivegreen;
+  padding: 0.5rem 0;
+}
+
+.item {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+
+.item td {
+  padding-top: 0.7rem;
+}
+
+.item td:first-child {
+  text-align: left;
+  padding-left: 2rem;
+}
+.icon {
+  position: relative;
+  color: blue;
+}
+
+.icon-trash {
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+  width: 1.5rem;
+  cursor: pointer;
+  transition: all 300ms;
+  color: inherit;
+}
+.icon-trash:hover {
+  opacity: 0.5;
+}
+.signature {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.signature a {
+  margin: 0 0.5rem;
+  color: darkcyan;
+  text-decoration: none;
+  transition: all 300ms;
+  font-weight: 600;
+}
+.signature a:hover {
+  color: brown;
 }

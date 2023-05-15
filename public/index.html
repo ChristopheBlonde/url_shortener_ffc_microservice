@@ -11,5 +11,68 @@
   </head>
   <body>
     <h1>URL Shortener Microservice</h1>
+    <fieldset id="form-container" class="form-container">
+      <legend class="form-legend">URL Shortener</legend>
+      <table>
+        <tbody>
+          <tr>
+            <td class="url-label">Original URL :</td>
+            <td>
+              <input id="url-input" class="url-input" type="text" autofocus />
+            </td>
+          </tr>
+          <tr>
+            <th class="btn-url-submit" colspan="2">
+              <button id="url-submit" class="url-submit" type="submit">
+                Post URL
+              </button>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
+    <fieldset id="short-url-container" class="short-url-container">
+      <legend class="short-url-legend">/api/shorturl/:short_url</legend>
+      <table>
+        <tbody id="list" class="list">
+          <tr>
+            <th colspan="2">Short URL List</th>
+          </tr>
+          <tr>
+            <td class="title-td">Original Url</td>
+            <td class="title-td">Short Url ref</td>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
+    <fieldset id="api-shorturl" class="form-container">
+      <legend class="form-legend">Test sort URL</legend>
+      <table>
+        <tr>
+          <td class="url-label">Short Ref :</td>
+          <td>
+            <input type="number" id="short-input" class="url-input" />
+          </td>
+        </tr>
+        <tr>
+          <th class="btn-url-submit" colspan="2">
+            <button id="short-submit" class="url-submit" type="submit">
+              Try Short
+            </button>
+          </th>
+        </tr>
+      </table>
+    </fieldset>
+    <div class="signature">
+      <a target="_blank" href="https://icons8.com/icon/iMs6ukNZl9UI/effacer"
+        >Trash</a
+      >
+      icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+      Code by
+      <a target="_blank" href="https://github.com/ChristopheBlonde"
+        >Blonde Christphe</a
+      >
+    </div>
   </body>
 </html>

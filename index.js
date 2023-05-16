@@ -34,19 +34,28 @@ app.get("/shorturl", async (req, res) => {
 app.post("/api/shorturl", async (req, res) => {
   const list = await Url.find();
   let num;
-  for (let i = 0; i < list.length; i++) {
-    if (i !== list.length - 1) {
-      if (list[i].short_url + 1 !== list[i + 1].short_url) {
+  if (list.length !== 0) {
+    for (let i = 0; i < list.length; i++) {
+      if (i !== list.length - 1) {
+        if (list[i].short_url + 1 !== list[i + 1].short_url) {
+          num = list[i].short_url + 1;
+          break;
+        }
+      } else {
         num = list[i].short_url + 1;
-        break;
       }
-    } else {
-      num = list[i].short_url + 1;
     }
+  } else {
+    num = 1;
   }
-  const regexp =
-    /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
-  if (regexp.test(req.body.url)) {
+
+  let givenUrl;
+  try {
+    givenUrl = new URL(req.body.url);
+  } catch (error) {
+    console.log({ error });
+  }
+  if (givenUrl.protocol === "http:" || givenUrl.protocol === "https:") {
     const newShorturl = new Url({
       original_url: req.body.url,
       short_url: num,
